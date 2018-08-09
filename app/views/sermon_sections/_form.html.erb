@@ -1,0 +1,32 @@
+<%= form_with(model: sermon_section, local: true) do |form| %>
+  <% if sermon_section.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(sermon_section.errors.count, "error") %> prohibited this sermon_section from being saved:</h2>
+
+      <ul>
+      <% sermon_section.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :speaker_note %>
+    <%= form.text_area :speaker_note %>
+  </div>
+
+  <div class="field">
+    <%= form.label :personal_note %>
+    <%= form.text_area :personal_note %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sermon_id %>
+    <%= form.text_field :sermon_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

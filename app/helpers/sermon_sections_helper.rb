@@ -1,0 +1,2 @@
+module SermonSectionsHelper
+end

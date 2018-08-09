@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  speaker_note: MyText
+  personal_note: MyText
+  sermon: one
+
+two:
+  speaker_note: MyText
+  personal_note: MyText
+  sermon: two

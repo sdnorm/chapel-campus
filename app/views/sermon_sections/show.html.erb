@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Speaker note:</strong>
+  <%= @sermon_section.speaker_note %>
+</p>
+
+<p>
+  <strong>Personal note:</strong>
+  <%= @sermon_section.personal_note %>
+</p>
+
+<p>
+  <strong>Sermon:</strong>
+  <%= @sermon_section.sermon %>
+</p>
+
+<%= link_to 'Edit', edit_sermon_section_path(@sermon_section) %> |
+<%= link_to 'Back', sermon_sections_path %>
