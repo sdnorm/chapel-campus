@@ -15,5 +15,24 @@
   <%= @sermon.date %>
 </p>
 
+<p>
+  <strong>Sections:</strong>
+  <br />
+  <br />
+  <% @sermon.sermon_sections.each do |section| %>
+    <strong>Title:</strong>
+    <%= section.title %>
+    <p>
+      <strong>Speaker Note:</strong>
+      <%= section.speaker_note %>
+    </p>
+    <p>
+      <strong>Personal Note:</strong>
+      personal note goes here to be emailed
+    </p>
+    <br />
+  <% end %>
+</p>
+
 <%= link_to 'Edit', edit_sermon_path(@sermon) %> |
 <%= link_to 'Back', sermons_path %>
