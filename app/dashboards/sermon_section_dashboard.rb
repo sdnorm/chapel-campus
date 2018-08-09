@@ -25,6 +25,7 @@ class SermonSectionDashboard < Administrate::BaseDashboard
   COLLECTION_ATTRIBUTES = [
     :sermon,
     :id,
+    :title,
     :speaker_note,
     :personal_note,
   ].freeze
