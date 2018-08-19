@@ -61,7 +61,18 @@ Rails.application.configure do
 
   # config.action_mailer.delivery_method = :mailgun
   # config.action_mailer.mailgun_settings = {
-  #   api_key: 'api-myapikey',
-  #   domain: 'mydomain.com',
+  #   api_key: ENV["MAILGUN_SECRET_API_KEY"],
+  #   domain: 'sandbox123a8201330f4379854909fe70766889.mailgun.org',
   # }
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    :authentication => :plain,
+    :address => "smtp.mailgun.org", # SMTP Hostname
+    :port => 587,
+    :domain => "https://api.mailgun.net/v3/sandbox376c698e75714760b42f6dd09566fb7e.mailgun.org", # API Base URL
+    :user_name => "postmaster@sandbox376c698e75714760b42f6dd09566fb7e.mailgun.org", # Default SMTP Login
+    :password => "a97b6cd32491cbf4ff292f8a132d23ef" # Default Password
+  }
+
 end
