@@ -70,9 +70,9 @@ Rails.application.configure do
     :authentication => :plain,
     :address => "smtp.mailgun.org", # SMTP Hostname
     :port => 587,
-    :domain => "https://api.mailgun.net/v3/sandbox376c698e75714760b42f6dd09566fb7e.mailgun.org", # API Base URL
-    :user_name => "postmaster@sandbox376c698e75714760b42f6dd09566fb7e.mailgun.org", # Default SMTP Login
-    :password => "a97b6cd32491cbf4ff292f8a132d23ef" # Default Password
+    :domain => ENV["MAILGUN_DOMAIN"], # API Base URL
+    :user_name => ENV["MAILGUN_USER_NAME"], # Default SMTP Login
+    :password => ENV["MAILGUN_PASSWORD"] # Default Password
   }
 
 end
