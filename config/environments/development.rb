@@ -59,20 +59,10 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
-  # config.action_mailer.delivery_method = :mailgun
-  # config.action_mailer.mailgun_settings = {
-  #   api_key: ENV["MAILGUN_SECRET_API_KEY"],
-  #   domain: 'sandbox123a8201330f4379854909fe70766889.mailgun.org',
-  # }
-
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-    :authentication => :plain,
-    :address => "smtp.mailgun.org", # SMTP Hostname
-    :port => 587,
-    :domain => ENV["MAILGUN_DOMAIN"], # API Base URL
-    :user_name => ENV["MAILGUN_USER_NAME"], # Default SMTP Login
-    :password => ENV["MAILGUN_PASSWORD"] # Default Password
+  config.action_mailer.delivery_method = :mailgun
+  config.action_mailer.mailgun_settings = {
+    api_key: ENV["MAILGUN_SECRET_API_KEY"],
+    domain: 'sandbox123a8201330f4379854909fe70766889.mailgun.org',
   }
 
 end
