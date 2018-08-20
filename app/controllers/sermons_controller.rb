@@ -4,8 +4,9 @@ class SermonsController < ApplicationController
   # GET /sermons
   # GET /sermons.json
   def index
-    @sermons = Sermon.all
-    @sermon = Sermon.last
+    # @sermons = Sermon.all
+    @sermon = Sermon.includes(:sermon_sections).last
+    @sermon_sections = @sermon.sermon_sections
   end
 
   # GET /sermons/1
