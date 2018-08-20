@@ -15,6 +15,7 @@ class SermonSectionDashboard < Administrate::BaseDashboard
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
     title: Field::String,
+    sermon_note_param_id: Field::String,
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -25,7 +26,6 @@ class SermonSectionDashboard < Administrate::BaseDashboard
   COLLECTION_ATTRIBUTES = [
     :sermon,
     :id,
-    :title,
     :speaker_note,
     :personal_note,
   ].freeze
@@ -40,6 +40,7 @@ class SermonSectionDashboard < Administrate::BaseDashboard
     :created_at,
     :updated_at,
     :title,
+    :sermon_note_param_id,
   ].freeze
 
   # FORM_ATTRIBUTES
@@ -50,6 +51,7 @@ class SermonSectionDashboard < Administrate::BaseDashboard
     :speaker_note,
     :personal_note,
     :title,
+    :sermon_note_param_id,
   ].freeze
 
   # Overwrite this method to customize how sermon sections are displayed

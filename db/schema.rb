@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_09_165736) do
+ActiveRecord::Schema.define(version: 2018_08_20_040312) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 2018_08_09_165736) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "title"
+    t.string "sermon_note_param_id"
     t.index ["sermon_id"], name: "index_sermon_sections_on_sermon_id"
   end
 
