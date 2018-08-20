@@ -5,6 +5,7 @@ class SermonsController < ApplicationController
   # GET /sermons.json
   def index
     @sermons = Sermon.all
+    @sermon = Sermon.last
   end
 
   # GET /sermons/1
