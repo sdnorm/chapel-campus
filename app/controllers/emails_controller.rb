@@ -20,7 +20,7 @@ class EmailsController < ApplicationController
       make_notes = {}
       @sermon.sermon_sections.each do |section|
         section_param = section.sermon_note_param_id
-        make_notes << "#{section_param}": params[":#{section_param}"
+        make_notes << "#{section_param}": params[:"#{section_param}"]
       end
       @notes = make_notes
     end
