@@ -22,7 +22,16 @@
 $(document).on('turbolinks:load', function() {
   return $('[data-provider="summernote"]').each(function() {
     return $(this).summernote({
-      height: 300
+      height: 150,
+      toolbar: [
+        // [groupName, [list of button]]
+        ['style', ['bold', 'italic', 'underline', 'clear']],
+        ['font', ['strikethrough', 'superscript', 'subscript']],
+        ['fontsize', ['fontsize']],
+        ['color', ['color']],
+        ['para', ['ul', 'ol', 'paragraph']],
+        ['height', ['height']]
+      ]
     });
   });
 });
