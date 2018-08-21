@@ -1,11 +1,11 @@
 <h2><%= @sermon.title %></h2>
 <hr />
-<%= @sermon.sections.each do |section| %>
+<%= @sermon.sermon_sections.each do |section| %>
   <h3><strong><%= section.title %></strong></h3>
   <%= raw section.speaker_note %>
   <br />
   <h3><strong>My Notes: </strong></h3>
   <% note = @notes.select {|k,v| k == :"#{section.sermon_note_param_id}"} %>
-  <%= raw note.values %>
+  <%= raw note.values.first %>
   <hr />
 <% end %>

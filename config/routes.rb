@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'emails/sermon_notes', to: 'emails#sermon_notes', as: :send_sermon_notes_email
+  post 'emails/sermon_notes', to: 'emails#sermon_notes', as: :send_sermon_notes_email
   devise_for :users, controllers: {registrations: "registrations"}
   namespace :admin do
     resources :sermons
