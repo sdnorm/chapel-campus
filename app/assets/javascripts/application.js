@@ -11,6 +11,18 @@
 // about supported directives.
 //
 //= require rails-ujs
+//= require jquery
+//= require popper
+//= require bootstrap
+//= require summernote/summernote-bs4.min
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+
+$(document).on('turbolinks:load', function() {
+  return $('[data-provider="summernote"]').each(function() {
+    return $(this).summernote({
+      height: 300
+    });
+  });
+});

@@ -1,28 +1,32 @@
-<p id="notice"><%= notice %></p>
+<div class="container-fluid">
+  <p id="notice"><%= notice %></p>
 
-<h1><%= @sermon.title %></h1>
-<h3><%= @sermon.speaker %></h3>
-<h4><%= @sermon.date %></h4>
+  <h1><%= @sermon.title %></h1>
+  <h3><%= @sermon.speaker %></h3>
+  <h4><%= @sermon.date %></h4>
 
-<%= form_with url: send_sermon_notes_email_path do |f| %>
-  <% @sermon_sections.each do |section| %>
-    <h2>
-      Section Title: <%= section.title %>
-    </h2>
-    <p>
-      <%= raw section.speaker_note %>
-    </p>
-    <hr />
-    <h2>My notes:</h2>
-    <%= f.text_area "#{section.sermon_note_param_id}" %>
-    <hr />
-    <hr />
+  <%= form_with url: send_sermon_notes_email_path do |f| %>
+    <% @sermon_sections.each do |section| %>
+      <h2>
+        Section Title: <%= section.title %>
+      </h2>
+      <p>
+        <%= raw section.speaker_note %>
+      </p>
+      <hr />
+      <h2>My notes:</h2>
+      <%= f.text_area "#{section.sermon_note_param_id}", 'data-provider': :summernote %>
+      <hr />
+      <hr />
+    <% end %>
+    <br />
+    <div class="form-group">
+      <%= f.label :email_address %>
+      <%= f.email_field :email_address, class: "form-control" %>
+    </div>
+    <br />
+    <br />
+    <%= f.hidden_field :sermon_id, value: @sermon.id %>
+    <%= f.submit "Send Sermon Email", class: "btn btn-primary" %>
   <% end %>
-  <br />
-  <%= f.label :email_address %>
-  <%= f.email_field :email_address %>
-  <br />
-  <br />
-  <%= f.hidden_field :sermon_id, value: @sermon.id %>
-  <%= f.submit "Send Sermon Email", class: "button" %>
-<% end %>
+</div>
