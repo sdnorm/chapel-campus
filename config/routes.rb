@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     resources :sermons
     resources :sermon_sections
 
-    root to: "sermons#index"
+    # root to: "sermons#index"
   end
 
   root to: "sermons#index"
