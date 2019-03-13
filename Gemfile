@@ -13,8 +13,10 @@ gem "figaro"
 
 gem 'jquery-rails'
 
-gem 'bootstrap', '~> 4.1.3'
+gem 'bootstrap', '>= 4.3.1'
 gem 'summernote-rails', '~> 0.8.10.0'
+
+gem "railties", ">= 5.2.2.1"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
