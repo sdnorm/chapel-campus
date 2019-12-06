@@ -294,7 +294,7 @@ DEPENDENCIES
   mailgun-ruby (~> 1.1.6)
   pg (>= 0.18, < 2.0)
   pry
-  puma (~> 3.11)
+  puma (~> 3.12)
   rails (~> 5.2.0)
   railties (>= 5.2.2.1)
   sass-rails (~> 5.0)
