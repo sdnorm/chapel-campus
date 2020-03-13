@@ -53,7 +53,7 @@ GEM
       jquery-rails (>= 4.0)
       kaminari (>= 1.0)
       momentjs-rails (~> 2.8)
-      sass-rails (~> 5.0)
+      sassc-rails (~> 2.1)
       selectize-rails (~> 0.6)
     archive-zip (0.12.0)
       io-like (~> 0.3.0)
@@ -82,15 +82,9 @@ GEM
     chromedriver-helper (2.1.1)
       archive-zip (~> 0.10)
       nokogiri (~> 1.8)
-<<<<<<< HEAD
     coderay (1.1.3)
     concurrent-ruby (1.1.6)
     crass (1.0.6)
-=======
-    coderay (1.1.2)
-    concurrent-ruby (1.1.5)
-    crass (1.0.5)
->>>>>>> ac24eb1... Bump loofah from 2.3.0 to 2.3.1
     datetime_picker_rails (0.0.7)
       momentjs-rails (>= 2.8.1)
     devise (4.7.1)
@@ -135,11 +129,7 @@ GEM
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
       ruby_dep (~> 1.2)
-<<<<<<< HEAD
     loofah (2.5.0)
-=======
-    loofah (2.3.1)
->>>>>>> ac24eb1... Bump loofah from 2.3.0 to 2.3.1
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.7.1)
@@ -280,7 +270,7 @@ PLATFORMS
 DEPENDENCIES
   actionview (>= 5.2.2.1)
   activesupport (>= 5.2.4.3)
-  administrate (= 0.10.0)
+  administrate (= 0.13.0)
   bootsnap (>= 1.1.0)
   bootstrap (>= 4.3.1)
   byebug
